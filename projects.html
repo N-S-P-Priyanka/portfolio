@@ -241,19 +241,36 @@
       <div class="container">
         <div class="projects-grid" id="projectsGrid">
 
+          <a href="gamesoul.html" class="project-card" data-type="data" data-skills="Python,PyTorch,Qdrant,Kafka,Airflow,PostgreSQL" data-search="gamesoul emotion driven game recommendation recommender system qdrant vector search ann thompson sampling bandit kafka airflow postgresql ab testing chi square embeddings llm">
+            <div class="card-visual">
+              <img src="assets/img/projects/gamesoul-architecture.png" alt="" class="card-visual-img">
+              <i class="bi bi-controller card-visual-icon"></i>
+            </div>
+            <div class="card-body-custom">
+              <div class="card-year">Jun 2026 &#xB7; UC San Diego</div>
+              <div class="card-category">Recommender Systems &#xB7; Data Engineering</div>
+              <h2 class="card-title">GameSoul &#x2013; Emotion-Driven Recommender</h2>
+              <p class="card-desc">End-to-end recommender over 50,000+ games across 9 emotional dimensions &#x2013; LLM-extracted emotion vectors, Qdrant ANN retrieval, and a Thompson Sampling bandit balancing exploration against known-good candidates, refreshed nightly through 4 Airflow DAGs over Kafka.</p>
+              <div class="card-skills"><span class="skill-tag">PyTorch</span><span class="skill-tag">Qdrant</span><span class="skill-tag">Kafka</span><span class="skill-tag">Airflow</span><span class="skill-tag">PostgreSQL</span></div>
+              <div class="card-footer-row" style="margin-top:14px;">
+                <div class="card-tags"><span class="card-tag">50,000+ games</span><span class="card-tag">3 parallel A/B experiments</span></div>
+                <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
+              </div>
+            </div>
+          </a>
           <a href="grid-green.html" class="project-card" data-type="data" data-skills="Python,FastAPI,Next.js,NLP,Docker" data-search="gridgreen carbon ml training co2 emissions sustainability fastapi nextjs rag prophet snowflake databricks sagemaker mcp">
             <div class="card-visual">
-              <img src="assets/img/projects/grid-green.svg" alt="" class="card-visual-img">
+              <img src="assets/img/projects/gridgreen-architecture.png" alt="" class="card-visual-img">
               <i class="bi bi-lightning-charge card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Apr 2026 &#xB7; UC San Diego</div>
               <div class="card-category">Carbon-Aware ML &#xB7; AI</div>
               <h2 class="card-title">GridGreen</h2>
               <p class="card-desc">A developer-first copilot that analyzes ML training code before execution  -  estimating CO&#x2082;, suggesting greener model alternatives, and scheduling jobs in cleaner grid windows.</p>
               <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">FastAPI</span><span class="skill-tag">RAG</span><span class="skill-tag">Prophet</span><span class="skill-tag">MCP</span></div>
               <div class="card-footer-row" style="margin-top:14px;">
-                <div class="card-tags"><span class="card-tag">&#x1F3C6; 2nd Place DataHacks 2026</span><span class="card-tag">77.6% compute reduction</span></div>
+                <div class="card-tags"><span class="card-tag">&#x1F3C6; 2nd Place, Cloud Track &#xB7; DataHacks 2026</span><span class="card-tag">&#x1F3C6; Best Use of Snowflake Cortex</span><span class="card-tag">77.6% compute reduction</span></div>
                 <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
               </div>
             </div>
@@ -264,7 +281,7 @@
               <i class="bi bi-gpu-card card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">May 2026 &#xB7; UC San Diego</div>
               <div class="card-category">ML Systems &#xB7; GPU &#xB7; Distributed</div>
               <h2 class="card-title">GPU Kernel + Distributed Training</h2>
               <p class="card-desc">Fused Triton GPU kernel (D=ReLU(A&#xD7;B+C)) achieving &#x2265;1.25&#xD7; PyTorch speedup via shared memory tiling and operator fusion, plus 2D data &#xD7; tensor parallel transformer training with custom MPI primitives.</p>
@@ -281,7 +298,7 @@
               <i class="bi bi-diagram-3 card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Feb 2026 &#xB7; UC San Diego</div>
               <div class="card-category">Deep Learning Systems</div>
               <h2 class="card-title">AutoDiff Engine + Transformer LM</h2>
               <p class="card-desc">Custom automatic differentiation engine and a decoder-only Transformer language model built from scratch  -  no PyTorch autograd. Full computational graph, 8 operators, causal attention, and autoregressive generation.</p>
@@ -294,17 +311,17 @@
           </a>
           <a href="large-scale.html" class="project-card" data-type="data" data-skills="Python,Dask,PyArrow,PCA,Pandas,NumPy" data-search="large scale nyc taxi pipeline distributed dask pyarrow pca time series gam xgboost analytics 57gb data engineering">
             <div class="card-visual">
-              <img src="assets/img/projects/large-scale.svg" alt="" class="card-visual-img">
+              <img src="assets/img/projects/nyctaxi-architecture.png" alt="" class="card-visual-img">
               <i class="bi bi-diagram-3 card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Mar 2026 &#xB7; UC San Diego</div>
               <div class="card-category">Data Engineering &#xB7; ML</div>
               <h2 class="card-title">Large-Scale NYC Taxi Pipeline</h2>
-              <p class="card-desc">Distributed analytics pipeline processing 57GB+ NYC taxi data with Dask and PyArrow  -  PCA-based representation learning, heavy-tail statistical analysis, bootstrap stability, GAM fare prediction, and XGBoost classification.</p>
+              <p class="card-desc">Partition-parallel ETL over 3.4B+ rows of NYC TLC trip data &#x2013; 443 Parquet files, 57GB, 10 years &#x2013; with Dask, PySpark and PyArrow  -  PCA-based representation learning, heavy-tail statistical analysis, bootstrap stability, GAM fare prediction, and XGBoost classification.</p>
               <div class="card-skills"><span class="skill-tag">Python</span><span class="skill-tag">Dask</span><span class="skill-tag">PyArrow</span><span class="skill-tag">PCA</span><span class="skill-tag">XGBoost</span><span class="skill-tag">GAM</span></div>
               <div class="card-footer-row" style="margin-top:14px;">
-                <div class="card-tags"><span class="card-tag">57GB+ dataset</span><span class="card-tag">GAM + XGBoost</span></div>
+                <div class="card-tags"><span class="card-tag">3.4B+ rows &#xB7; 57GB</span><span class="card-tag">443 Parquet files</span><span class="card-tag">GAM + XGBoost</span></div>
                 <div class="card-arrow"><i class="bi bi-arrow-right"></i></div>
               </div>
             </div>
@@ -315,7 +332,7 @@
               <i class="bi bi-heart-pulse card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Mar 2026 &#xB7; UC San Diego</div>
               <div class="card-category">Healthcare &#xB7; AI &#xB7; Multi-DB</div>
               <h2 class="card-title">MediDB &#x2013; Drug Safety &amp; Recommendation</h2>
               <p class="card-desc">Multi-database clinical decision-support system combining SQL, graph, and vector retrieval  -  explainable drug safety assessments with DDI detection, a Streamlit UI, and Docker deployment.</p>
@@ -349,7 +366,7 @@
               <i class="bi bi-bar-chart-line card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Jun 2025 &#xB7; UC San Diego</div>
               <div class="card-category">Data Analysis &#xB7; Tableau</div>
               <h2 class="card-title">Customer Response Analysis</h2>
               <p class="card-desc">Analysed 40,000+ bank marketing records with Python and Tableau  -  surfacing behavioral segments (retired 34%, students 28% conversion) and channel patterns that improved targeting efficiency by 12%.</p>
@@ -366,7 +383,7 @@
               <i class="bi bi-people card-visual-icon"></i>
             </div>
             <div class="card-body-custom">
-              <div class="card-year">2025 &#xB7; UC San Diego</div>
+              <div class="card-year">Dec 2025 &#xB7; UC San Diego</div>
               <div class="card-category">Machine Learning &#xB7; RecSys</div>
               <h2 class="card-title">Socially-Aware Recommendation System</h2>
               <p class="card-desc">Production-ready recommendation system with Bayesian MRF and social trust networks on 664K+ Epinions reviews  -  AUC 0.6248, 25% over baseline, 6% over IJCAI 2017, deployed on Hugging Face with FastAPI.</p>
