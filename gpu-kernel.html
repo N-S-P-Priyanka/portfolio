@@ -28,7 +28,7 @@
     <div class="container" style="position:relative;z-index:2;">
       <div class="article-hero-eyebrow" data-aos="fade-up" style="color:#f97316;"><span>Projects</span> / ML Systems &#xB7; GPU &#xB7; Distributed</div>
       <h1 data-aos="fade-up" data-aos-delay="80">GPU Kernel Optimization + Distributed Training</h1>
-      <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">Low-level ML systems engineering  -  a fused Triton GPU kernel (D=ReLU(A&#xD7;B+C)) with shared memory tiling and operator fusion achieving &#x2265;1.25&#xD7; PyTorch speedup, plus distributed transformer training with custom MPI AllReduce/AllToAll and 2D DP&#xD7;MP parallelism.</p>
+      <p class="article-hero-tagline" data-aos="fade-up" data-aos-delay="140">Low-level ML systems engineering  -  a fused Triton GPU kernel (D=ReLU(A&#xD7;B+C)) with shared memory tiling and operator fusion, outperforming PyTorch&#x2019;s reference kernel on the benchmarked shapes, plus distributed transformer training with custom MPI AllReduce/AllToAll and 2D DP&#xD7;MP parallelism.</p>
       <div class="meta-row" data-aos="fade-up" data-aos-delay="180">
         <div class="meta-pill"><i class="bi bi-calendar3"></i> May 2026 &#xB7; UC San Diego</div>
         <div class="meta-pill"><i class="bi bi-building"></i> UC San Diego</div>
@@ -55,7 +55,7 @@
     <div class="contributions-grid">
       <div class="contrib-card"><div class="contrib-icon" style="background:#f9731618;color:#f97316;"><i class="bi bi-grid-3x3"></i></div><h4>Tile Assignment + Parallelism</h4><p>Divides the output matrix into tiles. Each GPU thread block computes one tile in parallel. BLOCK_M, BLOCK_N, BLOCK_K tuned via configuration grid search for best performance.</p></div>
       <div class="contrib-card"><div class="contrib-icon" style="background:#f9731618;color:#f97316;"><i class="bi bi-memory"></i></div><h4>Shared Memory Tiling</h4><p>Loads sub-blocks of A and B into fast on-chip SRAM before computation. Dramatically reduces expensive global DRAM accesses  -  the primary GPU performance bottleneck. Register accumulation for partial results.</p></div>
-      <div class="contrib-card"><div class="contrib-icon" style="background:#f9731618;color:#f97316;"><i class="bi bi-lightning-charge"></i></div><h4>Operator Fusion &#x2B50;</h4><p>Fuses MatMul + Add + ReLU into a single kernel pass. Eliminates intermediate result writes to global memory  -  the key insight for achieving &#x2265;1.25&#xD7; PyTorch speedup. Performance depends on memory access patterns, not raw compute.</p></div>
+      <div class="contrib-card"><div class="contrib-icon" style="background:#f9731618;color:#f97316;"><i class="bi bi-lightning-charge"></i></div><h4>Operator Fusion &#x2B50;</h4><p>Fuses MatMul + Add + ReLU into a single kernel pass. Eliminates intermediate result writes to global memory  -  the key insight behind beating PyTorch&#x2019;s reference kernel on the benchmarked shapes. Performance depends on memory access patterns, not raw compute.</p></div>
     </div>
     <div class="code-block"><pre><span style="color:rgba(255,255,255,.35)"># Triton kernel  -  fused matmul + add + ReLU with shared memory</span>
 <span style="color:#fa687e">@triton.jit</span>
@@ -100,7 +100,7 @@
       <div class="section-label" style="color:#f97316;">05  -  Outcomes</div>
       <h2 class="section-title" style="color:#fff;">Results</h2>
       <div class="impact-grid">
-        <div class="impact-stat"><div class="stat-number" style="color:#f97316;">&#x2265;1.25&#xD7;</div><div class="stat-label">speedup over PyTorch baseline kernel</div></div>
+        <div class="impact-stat"><div class="stat-number" style="color:#f97316;">Beat</div><div class="stat-label">PyTorch reference kernel on benchmarked shapes</div></div>
         <div class="impact-stat"><div class="stat-number" style="color:#f97316;">3</div><div class="stat-label">collective primitives implemented from scratch</div></div>
         <div class="impact-stat"><div class="stat-number" style="color:#f97316;">2D</div><div class="stat-label">data + tensor parallel training pipeline</div></div>
       </div>
